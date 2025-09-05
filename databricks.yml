@@ -42,8 +42,10 @@ targets:
       # We explicitly deploy to /Workspace/Users/marekgsd@gmail.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     permissions:
-      - user_name: marekgsd@gmail.com
+      - service_principal_name: c3de77ae-dbdc-458c-9a5b-40410809d1d9
         level: CAN_MANAGE
+    run_as:
+      service_principal_name: c3de77ae-dbdc-458c-9a5b-40410809d1d9
 
   prod:
     mode: production
@@ -55,5 +57,7 @@ targets:
       # We explicitly deploy to /Workspace/Users/marekgsd@gmail.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     permissions:
-      - user_name: marekgsd@gmail.com
+      - service_principal_name: 90d44bb9-cc4b-4776-86f4-64dbdf60d930
         level: CAN_MANAGE
+    run_as:
+      service_principal_name: 90d44bb9-cc4b-4776-86f4-64dbdf60d930
